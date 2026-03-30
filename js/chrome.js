@@ -45,11 +45,13 @@
       "<a class=\"skip-link\" href=\"#main\">Skip to main content</a>" +
       "<header class=\"site-header\" id=\"top\">" +
       "<div class=\"header-inner\">" +
-      "<a class=\"logo\" href=\"index.html\" aria-label=\"St. Mary of the Angels, home\">" +
-      "<span class=\"logo-mark\" aria-hidden=\"true\">✠</span>" +
+      "<a class=\"logo\" href=\"index.html\" aria-label=\"St. George Church, Palapuram — home\">" +
+      "<span class=\"logo-mark\" aria-hidden=\"true\">" +
+      "<img src=\"images/cross-mark.svg\" width=\"44\" height=\"44\" alt=\"\" decoding=\"async\">" +
+      "</span>" +
       "<span class=\"logo-text\">" +
-      "<span class=\"logo-name\">St. Mary of the Angels</span>" +
-      "<span class=\"logo-tag\">Roman Catholic Parish</span>" +
+      "<span class=\"logo-name\">St. George Church</span>" +
+      "<span class=\"logo-tag\">Palapuram, Kerala · Syro-Malabar Catholic</span>" +
       "</span></a>" +
       "<button type=\"button\" class=\"nav-toggle\" aria-expanded=\"false\" aria-controls=\"site-nav\" aria-label=\"Open menu\">" +
       "<span class=\"nav-toggle-bar\"></span><span class=\"nav-toggle-bar\"></span><span class=\"nav-toggle-bar\"></span>" +
@@ -68,15 +70,17 @@
       "<footer class=\"site-footer\">" +
       "<div class=\"container footer-inner\">" +
       "<div class=\"footer-brand\">" +
-      "<span class=\"logo-mark\" aria-hidden=\"true\">✠</span>" +
-      "<div><strong>St. Mary of the Angels</strong>" +
-      "<p>Roman Catholic Parish · Diocese of Example</p></div></div>" +
+      "<span class=\"logo-mark\" aria-hidden=\"true\">" +
+      "<img src=\"images/cross-mark.svg\" width=\"40\" height=\"40\" alt=\"\" decoding=\"async\">" +
+      "</span>" +
+      "<div><strong>St. George Church</strong>" +
+      "<p>Palapuram, Kerala · Syro-Malabar Catholic Archdiocese of Thrissur</p></div></div>" +
       "<nav class=\"footer-nav\" aria-label=\"Footer\">" +
       "<a href=\"index.html\">Home</a>" +
       "<a href=\"mass-times.html\">Mass</a>" +
       "<a href=\"contact.html\">Contact</a>" +
       "</nav>" +
-      "<p class=\"footer-copy\">© <span id=\"year\"></span> St. Mary of the Angels. Built with reverence and care.</p>" +
+      "<p class=\"footer-copy\">© <span id=\"year\"></span> St. George Church, Palapuram. Built with reverence and care.</p>" +
       "</div></footer>"
     );
   }

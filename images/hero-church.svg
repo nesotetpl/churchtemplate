@@ -1,60 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" role="img" aria-labelledby="t1">
-  <title id="t1">Stylized Catholic church facade at dusk</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img" aria-labelledby="ht">
+  <title id="ht">St. George Church — stylized facade with Kerala palm and cross</title>
   <defs>
-    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2740"/>
-      <stop offset="55%" style="stop-color:#243652"/>
-      <stop offset="100%" style="stop-color:#152238"/>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3d32"/>
+      <stop offset="45%" style="stop-color:#0f2d26"/>
+      <stop offset="100%" style="stop-color:#0a1815"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e8c547"/>
-      <stop offset="100%" style="stop-color:#b8922e"/>
+    <linearGradient id="dome" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c4a052"/>
+      <stop offset="100%" style="stop-color:#8b6914"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
+    <linearGradient id="wall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8e0d4"/>
+      <stop offset="50%" style="stop-color:#f5f0e8"/>
+      <stop offset="100%" style="stop-color:#ddd5c8"/>
+    </linearGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="0.5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-  <rect width="900" height="520" fill="url(#sky)"/>
-  <ellipse cx="450" cy="480" rx="380" ry="28" fill="#0d1524" opacity="0.45"/>
+  <rect width="900" height="560" fill="url(#sky)"/>
+  <!-- Sunset glow -->
+  <ellipse cx="720" cy="180" rx="200" ry="120" fill="#6b0f23" opacity="0.25"/>
+  <ellipse cx="680" cy="200" rx="120" ry="80" fill="#c9a227" opacity="0.12"/>
   <!-- Ground -->
-  <rect x="0" y="420" width="900" height="100" fill="#121c2e"/>
-  <!-- Church body -->
-  <path d="M220 420 L220 260 L280 200 L280 160 L340 120 L450 55 L560 120 L620 160 L620 200 L680 260 L680 420 Z" fill="#1e2d45" stroke="#2a3f5c" stroke-width="2"/>
-  <!-- Side wings -->
-  <rect x="140" y="300" width="90" height="120" fill="#1a283d" stroke="#2a3f5c" stroke-width="1.5"/>
-  <rect x="670" y="300" width="90" height="120" fill="#1a283d" stroke="#2a3f5c" stroke-width="1.5"/>
-  <!-- Rose window -->
-  <circle cx="450" cy="210" r="52" fill="#0f1828" stroke="url(#gold)" stroke-width="3"/>
-  <circle cx="450" cy="210" r="38" fill="none" stroke="url(#gold)" stroke-width="1.2" opacity="0.7"/>
-  <g stroke="url(#gold)" stroke-width="1" opacity="0.55" fill="none">
-    <line x1="450" y1="158" x2="450" y2="262"/>
-    <line x1="398" y1="210" x2="502" y2="210"/>
-    <line x1="412" y1="176" x2="488" y2="244"/>
-    <line x1="488" y1="176" x2="412" y2="244"/>
+  <rect x="0" y="430" width="900" height="130" fill="#0d1f1a"/>
+  <ellipse cx="450" cy="430" rx="400" ry="24" fill="#050c0a" opacity="0.4"/>
+  <!-- Palm silhouettes -->
+  <g fill="#081510" opacity="0.85">
+    <path d="M120 430 L125 280 Q130 240 100 200 Q140 250 135 280 L140 430 Z"/>
+    <path d="M95 430 L105 320 Q95 280 60 250 Q110 290 115 330 L118 430 Z"/>
+    <path d="M780 430 L775 290 Q780 250 820 220 Q785 270 782 310 L778 430 Z"/>
   </g>
-  <!-- Door -->
-  <path d="M400 420 L400 310 Q450 280 500 310 L500 420 Z" fill="#0a101a" stroke="url(#gold)" stroke-width="2"/>
-  <!-- Towers -->
-  <rect x="250" y="115" width="55" height="145" fill="#243652" stroke="#3d5270" stroke-width="1"/>
-  <rect x="595" y="115" width="55" height="145" fill="#243652" stroke="#3d5270" stroke-width="1"/>
-  <polygon points="277,115 250,85 305,85" fill="#2c3d56"/>
-  <polygon points="622,115 595,85 650,85" fill="#2c3d56"/>
-  <!-- Crosses -->
-  <g fill="url(#gold)" filter="url(#glow)">
-    <rect x="273" y="68" width="8" height="36" rx="1"/>
-    <rect x="262" y="78" width="30" height="8" rx="1"/>
-    <rect x="618" y="68" width="8" height="36" rx="1"/>
-    <rect x="607" y="78" width="30" height="8" rx="1"/>
-    <rect x="446" y="28" width="10" height="42" rx="1"/>
-    <rect x="432" y="40" width="38" height="10" rx="1"/>
+  <!-- Church -->
+  <g filter="url(#soft)">
+    <path d="M200 430 L200 270 L250 220 L250 180 L320 130 L450 75 L580 130 L650 180 L650 220 L700 270 L700 430 Z" fill="url(#wall)" stroke="#b8a88c" stroke-width="1.5"/>
+    <!-- Central dome (Syro-Malabar hint) -->
+    <ellipse cx="450" cy="125" rx="95" ry="28" fill="url(#dome)" stroke="#6b5210" stroke-width="1"/>
+    <path d="M355 125 Q450 40 545 125 L530 140 Q450 70 370 140 Z" fill="url(#dome)" stroke="#5a4508" stroke-width="1"/>
+    <!-- Cross -->
+    <g fill="#c9a227">
+      <rect x="446" y="48" width="8" height="44" rx="1"/>
+      <rect x="432" y="62" width="36" height="8" rx="1"/>
+    </g>
+    <!-- Side towers -->
+    <rect x="230" y="195" width="48" height="235" fill="#d8d0c4" stroke="#a89878" stroke-width="1"/>
+    <rect x="622" y="195" width="48" height="235" fill="#d8d0c4" stroke="#a89878" stroke-width="1"/>
+    <polygon points="254,195 230,175 278,175" fill="#8b6914"/>
+    <polygon points="646,195 622,175 670,175" fill="#8b6914"/>
+    <!-- Rose / George circle -->
+    <circle cx="450" cy="240" r="48" fill="#0f2419" stroke="#c9a227" stroke-width="2.5"/>
+    <g fill="#c9a227">
+      <rect x="446" y="214" width="8" height="52" rx="1"/>
+      <rect x="428" y="232" width="44" height="8" rx="1"/>
+    </g>
+    <!-- Door -->
+    <path d="M395 430 L395 310 Q450 275 505 310 L505 430 Z" fill="#0a1210" stroke="#6b0f23" stroke-width="2"/>
+    <!-- Windows -->
+    <rect x="270" y="320" width="36" height="52" rx="3" fill="#1a3d32" stroke="#c9a227" stroke-width="1" opacity="0.9"/>
+    <rect x="594" y="320" width="36" height="52" rx="3" fill="#1a3d32" stroke="#c9a227" stroke-width="1" opacity="0.9"/>
+    <rect x="270" y="250" width="28" height="40" rx="2" fill="#6b0f23" opacity="0.35"/>
+    <rect x="602" y="250" width="28" height="40" rx="2" fill="#6b0f23" opacity="0.35"/>
   </g>
-  <!-- Windows warm light -->
-  <rect x="165" y="330" width="28" height="40" rx="2" fill="#c9a227" opacity="0.35"/>
-  <rect x="707" y="330" width="28" height="40" rx="2" fill="#c9a227" opacity="0.35"/>
-  <!-- Stars -->
-  <g fill="#fff" opacity="0.35">
-    <circle cx="120" cy="80" r="1.2"/><circle cx="780" cy="95" r="1"/><circle cx="640" cy="60" r="1.1"/>
-    <circle cx="200" cy="55" r="0.9"/><circle cx="520" cy="40" r="1"/><circle cx="90" cy="140" r="0.8"/>
-  </g>
+  <!-- Warm window light -->
+  <rect x="275" y="325" width="26" height="30" rx="2" fill="#c9a227" opacity="0.2"/>
 </svg>
