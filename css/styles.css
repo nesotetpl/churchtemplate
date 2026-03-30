@@ -1,18 +1,22 @@
-/* St. George Church, Palapuram — Syro-Malabar Catholic parish
-   Kerala-inspired: deep forest, temple gold, crimson accent */
+/* St. George Church, Palapuram — professional green & grey system */
 
 :root {
-  --color-bg: #faf8f4;
-  --color-bg-deep: #eef2ef;
-  --color-ink: #0f2419;
-  --color-ink-muted: #3d5248;
-  --color-navy: #0f2419;
-  --color-navy-soft: #1a3d32;
-  --color-gold: #b8892a;
-  --color-gold-bright: #d4af37;
-  --color-burgundy: #6b0f23;
-  --color-white: #fffef9;
-  --color-mint-tint: rgba(26, 61, 50, 0.06);
+  --color-bg: #f4f6f5;
+  --color-bg-deep: #e8ecea;
+  --color-ink: #1c2421;
+  --color-ink-muted: #5c6561;
+  --color-navy: #1e2c28;
+  --color-navy-soft: #2f4a42;
+  --color-accent: #3a7d6d;
+  --color-accent-soft: #6a9e90;
+  --color-accent-strong: #2d6558;
+  /* Legacy names map to green accent (keeps existing rules coherent) */
+  --color-gold: #4a8b7c;
+  --color-gold-bright: #7eb3a5;
+  --color-burgundy: #3a7d6d;
+  --color-white: #fcfdfc;
+  --color-border: rgba(30, 44, 40, 0.1);
+  --color-border-strong: rgba(30, 44, 40, 0.16);
   --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-sans: "Source Sans 3", system-ui, sans-serif;
   --space-xs: 0.35rem;
@@ -21,12 +25,13 @@
   --space-lg: 2rem;
   --space-xl: 3.5rem;
   --space-2xl: 5rem;
-  --radius: 4px;
-  --shadow-soft: 0 4px 28px rgba(15, 36, 41, 0.07);
-  --shadow-card: 0 12px 40px rgba(15, 36, 41, 0.1);
+  --radius: 6px;
+  --radius-sm: 4px;
+  --shadow-soft: 0 2px 16px rgba(30, 44, 40, 0.06);
+  --shadow-card: 0 8px 32px rgba(30, 44, 40, 0.08);
   --header-h: 4.25rem;
   --tap-min: 2.75rem;
-  --transition: 0.22s ease;
+  --transition: 0.2s ease;
 }
 
 *,
@@ -72,9 +77,9 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.4;
-  background-image: radial-gradient(circle at 20% 0%, rgba(26, 61, 50, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 80% 100%, rgba(107, 15, 35, 0.04) 0%, transparent 40%);
+  opacity: 0.55;
+  background-image: radial-gradient(ellipse 70% 50% at 15% -10%, rgba(58, 125, 109, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 45% at 100% 100%, rgba(94, 108, 102, 0.05) 0%, transparent 50%);
 }
 
 .skip-link {
@@ -112,13 +117,13 @@ img {
 }
 
 a {
-  color: var(--color-burgundy);
+  color: var(--color-accent-strong);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
 
 a:hover {
-  color: var(--color-navy);
+  color: var(--color-navy-soft);
 }
 
 .container {
@@ -145,9 +150,9 @@ a:hover {
   right: 0;
   z-index: 100;
   height: var(--header-h);
-  background: rgba(250, 248, 244, 0.94);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(26, 61, 50, 0.1);
+  background: rgba(252, 253, 252, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
   transition: box-shadow var(--transition);
 }
 
@@ -272,18 +277,18 @@ body.nav-open .nav-toggle-bar:nth-child(3) {
 }
 
 .nav-list a:hover {
-  color: var(--color-burgundy);
+  color: var(--color-accent-strong);
 }
 
 .nav-cta {
-  padding: 0.45rem 1rem;
-  background: var(--color-navy);
+  padding: 0.45rem 1.15rem;
+  background: var(--color-accent-strong);
   color: var(--color-white) !important;
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
 }
 
 .nav-cta:hover {
-  background: var(--color-navy-soft);
+  background: var(--color-navy);
   color: var(--color-white) !important;
 }
 
@@ -303,7 +308,7 @@ body.nav-open .nav-toggle-bar:nth-child(3) {
     position: fixed;
     inset: 0;
     z-index: 105;
-    background: rgba(15, 36, 41, 0.5);
+    background: rgba(30, 44, 40, 0.45);
     opacity: 0;
     visibility: hidden;
     transition: opacity var(--transition), visibility var(--transition);
@@ -404,11 +409,11 @@ body.nav-open {
   background:
     linear-gradient(
       165deg,
-      rgba(15, 36, 25, 0.9) 0%,
-      rgba(26, 61, 50, 0.82) 42%,
-      rgba(107, 15, 35, 0.55) 100%
+      rgba(30, 44, 40, 0.92) 0%,
+      rgba(47, 74, 66, 0.85) 50%,
+      rgba(74, 90, 84, 0.75) 100%
     ),
-    radial-gradient(ellipse 90% 70% at 70% 15%, rgba(212, 175, 55, 0.12), transparent 50%),
+    radial-gradient(ellipse 100% 80% at 50% 0%, rgba(106, 158, 144, 0.14), transparent 55%),
     var(--color-navy-soft);
   background-size: 100% 100%, 100% 100%, auto;
 }
@@ -417,8 +422,8 @@ body.nav-open {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.06;
-  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 4v64M4 36h64' stroke='%23d4af37' stroke-width='0.4' fill='none'/%3E%3Ccircle cx='36' cy='36' r='2' fill='%23d4af37' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 4v64M4 36h64' stroke='%237eb3a5' stroke-width='0.4' fill='none'/%3E%3Ccircle cx='36' cy='36' r='1.5' fill='%237eb3a5' opacity='0.4'/%3E%3C/svg%3E");
 }
 
 .hero-content {
@@ -429,11 +434,12 @@ body.nav-open {
 
 .hero-eyebrow {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-style: italic;
-  color: var(--color-gold-bright);
-  letter-spacing: 0.08em;
-  text-transform: lowercase;
+  font-weight: 500;
+  color: var(--color-accent-soft);
+  letter-spacing: 0.06em;
+  text-transform: none;
   margin: 0 0 var(--space-sm);
 }
 
@@ -478,14 +484,14 @@ body.nav-open {
 }
 
 .btn-primary {
-  background: var(--color-gold);
+  background: var(--color-white);
   color: var(--color-navy);
-  border-color: var(--color-gold);
+  border-color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background: var(--color-gold-bright);
-  border-color: var(--color-gold-bright);
+  background: var(--color-bg-deep);
+  border-color: var(--color-bg-deep);
   color: var(--color-navy);
 }
 
@@ -520,7 +526,7 @@ body.nav-open {
 .hero-scroll-line {
   width: 1px;
   height: 2.5rem;
-  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.6), transparent);
+  background: linear-gradient(to bottom, rgba(126, 179, 165, 0.55), transparent);
 }
 
 /* —— Sections —— */
@@ -537,7 +543,7 @@ body.nav-open {
 }
 
 .section-sacraments {
-  background: var(--color-navy);
+  background: linear-gradient(180deg, #243530 0%, var(--color-navy) 45%, #161d1b 100%);
   color: var(--color-white);
 }
 
@@ -576,6 +582,11 @@ body.nav-open {
   color: var(--color-white);
 }
 
+.section-sacraments .section-head .section-title::after {
+  background: var(--color-accent-soft);
+  opacity: 0.9;
+}
+
 .section-intro,
 .section-deck {
   margin: 0;
@@ -599,17 +610,17 @@ body.nav-open {
 .section-head .section-title::after {
   content: "";
   display: block;
-  width: 3rem;
-  height: 3px;
+  width: 2.75rem;
+  height: 2px;
   margin: var(--space-sm) auto 0;
-  background: linear-gradient(90deg, var(--color-burgundy), var(--color-gold-bright));
-  border-radius: 2px;
+  background: var(--color-accent);
+  border-radius: 1px;
 }
 
 .pullquote {
   margin: var(--space-xl) 0 0;
   padding: var(--space-lg) var(--space-xl);
-  border-left: 3px solid var(--color-gold);
+  border-left: 3px solid var(--color-accent);
   background: var(--color-white);
   box-shadow: var(--shadow-soft);
 }
@@ -645,9 +656,9 @@ body.nav-open {
 .card {
   background: var(--color-white);
   padding: var(--space-lg);
-  border-radius: 6px;
-  box-shadow: var(--shadow-card);
-  border: 1px solid rgba(15, 36, 41, 0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
 }
 
 .card-title {
@@ -659,13 +670,13 @@ body.nav-open {
 }
 
 .card-highlight {
-  background: linear-gradient(145deg, var(--color-navy-soft) 0%, var(--color-navy) 100%);
-  color: rgba(255, 254, 249, 0.92);
+  background: linear-gradient(145deg, #3d524c 0%, var(--color-navy-soft) 50%, #2a3834 100%);
+  color: rgba(252, 253, 252, 0.94);
   border-color: transparent;
 }
 
 .card-highlight .card-title {
-  color: var(--color-gold-bright);
+  color: var(--color-accent-soft);
 }
 
 .card-highlight p {
@@ -675,7 +686,7 @@ body.nav-open {
 }
 
 .card-highlight .text-link {
-  color: var(--color-gold-bright);
+  color: var(--color-accent-soft);
   font-weight: 600;
   text-decoration: none;
 }
@@ -711,7 +722,7 @@ body.nav-open {
 
 .schedule-list .time {
   font-variant-numeric: tabular-nums;
-  color: var(--color-burgundy);
+  color: var(--color-accent-strong);
   font-weight: 600;
 }
 
@@ -750,7 +761,7 @@ body.nav-open {
   flex-shrink: 0;
   width: 2rem;
   text-align: center;
-  color: var(--color-gold-bright);
+  color: var(--color-accent-soft);
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -769,7 +780,7 @@ body.nav-open {
 }
 
 .section-sacraments a {
-  color: var(--color-gold-bright);
+  color: var(--color-accent-soft);
 }
 
 .section-sacraments a:hover {
@@ -791,14 +802,14 @@ body.nav-open {
 
 .ministry-card {
   padding: var(--space-lg);
-  background: var(--color-bg);
-  border-radius: 6px;
-  border: 1px solid rgba(15, 36, 41, 0.06);
+  background: var(--color-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .ministry-card:hover {
-  border-color: rgba(184, 146, 46, 0.35);
+  border-color: rgba(58, 125, 109, 0.28);
   box-shadow: var(--shadow-soft);
 }
 
@@ -856,9 +867,9 @@ body.nav-open {
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  background: var(--color-navy);
-  color: rgba(255, 254, 249, 0.55);
-  border-radius: 6px;
+  background: linear-gradient(160deg, #3a4542 0%, var(--color-navy) 100%);
+  color: rgba(252, 253, 252, 0.55);
+  border-radius: var(--radius);
   font-size: 0.9rem;
   text-align: center;
   padding: var(--space-lg);
@@ -866,8 +877,8 @@ body.nav-open {
 
 .map-cross {
   font-size: 2.5rem;
-  color: var(--color-gold);
-  opacity: 0.5;
+  color: var(--color-accent-soft);
+  opacity: 0.45;
 }
 
 /* —— Contact —— */
@@ -898,8 +909,8 @@ body.nav-open {
   font-family: var(--font-sans);
   font-size: 1rem;
   padding: 0.65rem 0.85rem;
-  border: 1px solid rgba(15, 36, 41, 0.15);
-  border-radius: var(--radius);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
   background: var(--color-white);
   color: var(--color-ink);
 }
@@ -907,7 +918,7 @@ body.nav-open {
 .form-row input:focus,
 .form-row textarea:focus,
 .form-row select:focus {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-color: transparent;
 }
@@ -921,7 +932,7 @@ body.nav-open {
 .contact-direct {
   margin-top: var(--space-xl);
   padding-top: var(--space-lg);
-  border-top: 1px solid rgba(15, 36, 41, 0.1);
+  border-top: 1px solid var(--color-border);
 }
 
 .contact-direct p {
@@ -930,8 +941,8 @@ body.nav-open {
 
 /* —— Footer —— */
 .site-footer {
-  background: var(--color-navy);
-  color: rgba(255, 254, 249, 0.75);
+  background: linear-gradient(180deg, #252f2c 0%, var(--color-navy) 100%);
+  color: rgba(252, 253, 252, 0.72);
   padding: var(--space-xl) 0 max(var(--space-lg), env(safe-area-inset-bottom, 0px));
   font-size: 0.95rem;
 }
@@ -980,22 +991,22 @@ body.nav-open {
 }
 
 .footer-nav a {
-  color: rgba(255, 254, 249, 0.85);
+  color: rgba(252, 253, 252, 0.82);
   text-decoration: none;
   font-weight: 500;
 }
 
 .footer-nav a:hover {
-  color: var(--color-gold-bright);
+  color: var(--color-accent-soft);
 }
 
 .footer-copy {
   width: 100%;
   margin: var(--space-md) 0 0;
   padding-top: var(--space-md);
-  border-top: 1px solid rgba(255, 254, 249, 0.1);
+  border-top: 1px solid rgba(252, 253, 252, 0.1);
   font-size: 0.8rem;
-  color: rgba(255, 254, 249, 0.45);
+  color: rgba(252, 253, 252, 0.42);
 }
 
 /* —— Home: hero with church illustration —— */
@@ -1003,9 +1014,9 @@ body.nav-open {
   background:
     linear-gradient(
       165deg,
-      rgba(15, 36, 25, 0.78) 0%,
-      rgba(26, 61, 50, 0.65) 45%,
-      rgba(107, 15, 35, 0.45) 100%
+      rgba(30, 44, 40, 0.82) 0%,
+      rgba(47, 74, 66, 0.68) 48%,
+      rgba(90, 102, 98, 0.55) 100%
     ),
     url("../images/hero-church.svg") center 42% / cover no-repeat,
     var(--color-navy-soft);
@@ -1017,10 +1028,10 @@ body.nav-open {
 
 /* —— Quick links strip (home) —— */
 .quick-links {
-  background: linear-gradient(90deg, var(--color-navy) 0%, var(--color-navy-soft) 50%, var(--color-navy) 100%);
+  background: linear-gradient(90deg, var(--color-navy) 0%, #2c3b36 50%, var(--color-navy) 100%);
   color: var(--color-white);
   padding: var(--space-md) 0 max(var(--space-md), env(safe-area-inset-bottom, 0px));
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-top: 1px solid rgba(106, 158, 144, 0.2);
 }
 
 .quick-links-inner {
@@ -1047,7 +1058,7 @@ body.nav-open {
 }
 
 .quick-links a:hover {
-  color: var(--color-gold-bright);
+  color: var(--color-accent-soft);
 }
 
 .quick-links .ql-icon {
@@ -1057,10 +1068,10 @@ body.nav-open {
 /* —— Media figures —— */
 .media-figure {
   margin: 0;
-  border-radius: 8px;
+  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
-  border: 1px solid rgba(15, 36, 41, 0.08);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
 }
 
 .media-figure img {
@@ -1113,7 +1124,7 @@ body.nav-open {
 }
 
 .page-hero--accent {
-  background: linear-gradient(145deg, var(--color-navy-soft) 0%, var(--color-navy) 55%, #1a0f14 100%);
+  background: linear-gradient(145deg, #3d524c 0%, var(--color-navy-soft) 40%, var(--color-navy) 100%);
 }
 
 .page-hero__title {
@@ -1134,7 +1145,7 @@ body.nav-open {
 }
 
 .page-hero__deck a {
-  color: var(--color-gold-bright);
+  color: var(--color-accent-soft);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -1144,11 +1155,12 @@ body.nav-open {
 }
 
 .page-hero__crumb {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   margin-bottom: var(--space-sm);
-  color: var(--color-gold-bright);
+  color: rgba(126, 179, 165, 0.95);
+  font-weight: 600;
 }
 
 .page-hero__crumb a {
@@ -1212,8 +1224,8 @@ body.nav-open {
   display: block;
   padding: var(--space-lg);
   background: var(--color-white);
-  border-radius: 6px;
-  border: 1px solid rgba(15, 36, 41, 0.08);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
   text-decoration: none;
   color: inherit;
@@ -1221,7 +1233,7 @@ body.nav-open {
 }
 
 .link-card:hover {
-  border-color: rgba(184, 146, 46, 0.45);
+  border-color: rgba(58, 125, 109, 0.35);
   box-shadow: var(--shadow-card);
   transform: translateY(-2px);
 }
@@ -1245,7 +1257,7 @@ body.nav-open {
   margin-top: var(--space-sm);
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-burgundy);
+  color: var(--color-accent-strong);
 }
 
 .two-col {
@@ -1269,7 +1281,7 @@ body.nav-open {
 
 .info-list li {
   padding: var(--space-sm) 0;
-  border-bottom: 1px solid rgba(15, 36, 41, 0.08);
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
@@ -1284,8 +1296,8 @@ body.nav-open {
 .table-wrap {
   overflow-x: auto;
   margin: var(--space-md) 0;
-  border-radius: 6px;
-  border: 1px solid rgba(15, 36, 41, 0.1);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border-strong);
 }
 
 .data-table {
@@ -1303,7 +1315,7 @@ body.nav-open {
 }
 
 .data-table th {
-  background: var(--color-navy);
+  background: #2f3d38;
   color: var(--color-white);
   font-weight: 600;
 }
@@ -1314,9 +1326,9 @@ body.nav-open {
 
 .alert-box {
   padding: var(--space-md) var(--space-lg);
-  background: rgba(184, 146, 46, 0.12);
-  border-left: 4px solid var(--color-gold);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(58, 125, 109, 0.08);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   margin: var(--space-lg) 0;
 }
 
@@ -1341,8 +1353,9 @@ body.nav-open {
 .form-success {
   display: none;
   padding: var(--space-md);
-  background: rgba(45, 90, 74, 0.12);
-  border-radius: var(--radius);
+  background: rgba(58, 125, 109, 0.1);
+  border: 1px solid rgba(58, 125, 109, 0.2);
+  border-radius: var(--radius-sm);
   color: var(--color-ink);
   margin-top: var(--space-md);
 }
@@ -1354,9 +1367,10 @@ body.nav-open {
 .file-path {
   font-family: ui-monospace, monospace;
   font-size: 0.9em;
-  background: rgba(15, 36, 41, 0.06);
+  background: var(--color-bg-deep);
   padding: 0.1em 0.35em;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
+  color: var(--color-ink-muted);
 }
 
 .contact-note {
