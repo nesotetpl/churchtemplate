@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="St. Mary of the Angels Catholic Parish — Mass times, sacraments, and community in Christ.">
+  <meta name="description" content="St. Mary of the Angels Catholic Parish — Mass times, sacraments, faith formation, and community in Christ.">
   <title>St. Mary of the Angels | Catholic Parish</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,45 +11,18 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <header class="site-header" id="top">
-    <div class="header-inner">
-      <a class="logo" href="#top" aria-label="St. Mary of the Angels, home">
-        <span class="logo-mark" aria-hidden="true">✠</span>
-        <span class="logo-text">
-          <span class="logo-name">St. Mary of the Angels</span>
-          <span class="logo-tag">Roman Catholic Parish</span>
-        </span>
-      </a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="#welcome">Welcome</a></li>
-          <li><a href="#mass">Mass</a></li>
-          <li><a href="#sacraments">Sacraments</a></li>
-          <li><a href="#ministries">Parish Life</a></li>
-          <li><a href="#visit">Visit</a></li>
-          <li><a class="nav-cta" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header-root"></div>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero hero--image" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="hero-eyebrow">Dominus vobiscum</p>
         <h1 id="hero-title" class="hero-title">Welcome home</h1>
         <p class="hero-lead">Gather with us in prayer, receive the sacraments, and walk together in faith—<em>all are welcome</em> at the Lord’s table.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#mass">Mass schedule</a>
-          <a class="btn btn-ghost" href="#visit">Plan your visit</a>
+          <a class="btn btn-primary" href="mass-times.html">Mass schedule</a>
+          <a class="btn btn-ghost" href="contact.html">Contact us</a>
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">
@@ -58,10 +31,30 @@
       </div>
     </section>
 
+    <nav class="quick-links" aria-label="Popular links">
+      <ul class="quick-links-inner">
+        <li><a href="mass-times.html"><span class="ql-icon" aria-hidden="true">☩</span> Mass times</a></li>
+        <li><a href="bulletin.html"><span class="ql-icon" aria-hidden="true">¶</span> Parish bulletin</a></li>
+        <li><a href="donate.html"><span class="ql-icon" aria-hidden="true">✠</span> Online giving</a></li>
+        <li><a href="faith-formation.html"><span class="ql-icon" aria-hidden="true">✧</span> Faith formation</a></li>
+        <li><a href="https://www.usccb.org/prayer-and-worship/the-mass/daily-readings" rel="noopener noreferrer" target="_blank"><span class="ql-icon" aria-hidden="true">†</span> Daily readings <span class="visually-hidden">(opens new tab)</span></a></li>
+        <li><a href="https://www.vatican.va/content/vatican/en.html" rel="noopener noreferrer" target="_blank"><span class="ql-icon" aria-hidden="true">◇</span> The Vatican <span class="visually-hidden">(opens new tab)</span></a></li>
+      </ul>
+    </nav>
+
     <section class="section section-welcome" id="welcome" aria-labelledby="welcome-title">
-      <div class="container narrow">
-        <h2 id="welcome-title" class="section-title">Our parish family</h2>
-        <p class="section-intro">For over a century, St. Mary of the Angels has been a beacon of hope in our neighborhood—a place where the Eucharist is celebrated with reverence, where the poor are served with love, and where each person is called by name into deeper friendship with Christ.</p>
+      <div class="welcome-split">
+        <div>
+          <h2 id="welcome-title" class="section-title">Our parish family</h2>
+          <p class="section-intro">For over a century, St. Mary of the Angels has been a beacon of hope in our neighborhood—a place where the Eucharist is celebrated with reverence, where the poor are served with love, and where each person is called by name into deeper friendship with Christ.</p>
+          <p class="section-intro"><a href="about.html">Read our story →</a></p>
+        </div>
+        <figure class="media-figure">
+          <img src="images/welcome-gathering.svg" width="640" height="400" alt="Stylized illustration of people gathered in community" loading="lazy">
+          <figcaption>We are one body in Christ.</figcaption>
+        </figure>
+      </div>
+      <div class="container narrow" style="margin-top: var(--space-xl);">
         <blockquote class="pullquote">
           <p>“The Eucharist is the source and summit of the Christian life.”</p>
           <cite>— Catechism of the Catholic Church, 1324</cite>
@@ -73,7 +66,7 @@
       <div class="container">
         <div class="section-head">
           <h2 id="mass-title" class="section-title">Mass &amp; confession</h2>
-          <p class="section-deck">Join us for the Holy Sacrifice of the Mass. Confession is offered before weekend Masses and by appointment.</p>
+          <p class="section-deck">Join us for the Holy Sacrifice of the Mass. Confession is offered before weekend Masses and by appointment. <a href="mass-times.html">Full schedule →</a></p>
         </div>
         <div class="card-grid">
           <article class="card card-schedule">
@@ -94,9 +87,9 @@
             </ul>
           </article>
           <article class="card card-highlight">
-            <h3 class="card-title">Holy days</h3>
-            <p>Mass times for solemnities and holy days of obligation are announced in the bulletin and on our parish calendar. When in doubt, call the office—we would love to hear from you.</p>
-            <a class="text-link" href="#contact">Call the parish office →</a>
+            <h3 class="card-title">Holy days &amp; more</h3>
+            <p>Adoration, confession times, and holy day Masses are on our <a class="text-link" href="mass-times.html">Mass &amp; adoration page</a>. Bulletins list any changes.</p>
+            <a class="text-link" href="contact.html">Call the parish office →</a>
           </article>
         </div>
       </div>
@@ -106,35 +99,35 @@
       <div class="container">
         <div class="section-head">
           <h2 id="sacraments-title" class="section-title">Sacraments</h2>
-          <p class="section-deck">Christ meets us in visible signs. We prepare souls carefully and joyfully for each sacrament of the Church.</p>
+          <p class="section-deck">Christ meets us in visible signs. Learn how we prepare for baptism, marriage, first Communion, and more on our <a href="sacraments.html">sacraments page</a>.</p>
         </div>
         <ul class="sacrament-list">
           <li class="sacrament-item">
             <span class="sacrament-icon" aria-hidden="true">☩</span>
             <div>
               <h3>Baptism</h3>
-              <p>Infant baptisms are celebrated monthly; parents and godparents attend preparation sessions. Adults enter through RCIA.</p>
+              <p>Infant baptisms are celebrated monthly; parents and godparents attend preparation. Adults enter through <a href="faith-formation.html#rcia">RCIA</a>.</p>
             </div>
           </li>
           <li class="sacrament-item">
             <span class="sacrament-icon" aria-hidden="true">☩</span>
             <div>
               <h3>Reconciliation</h3>
-              <p>Saturday 4:00–4:45 p.m. or anytime by appointment. God’s mercy is always greater than our sins.</p>
+              <p>Saturday 4:00–4:45 p.m. or by appointment. God’s mercy is always greater than our sins.</p>
             </div>
           </li>
           <li class="sacrament-item">
             <span class="sacrament-icon" aria-hidden="true">☩</span>
             <div>
               <h3>Matrimony</h3>
-              <p>Couples should contact the parish at least six months before a desired wedding date to begin preparation.</p>
+              <p>Contact the parish at least six months before your wedding. See <a href="sacraments.html#marriage">marriage preparation</a>.</p>
             </div>
           </li>
           <li class="sacrament-item">
             <span class="sacrament-icon" aria-hidden="true">☩</span>
             <div>
               <h3>Anointing &amp; Viaticum</h3>
-              <p>For anyone facing serious illness or surgery, call the parish office day or night for a priest.</p>
+              <p>For serious illness or surgery, call the parish office day or night for a priest.</p>
             </div>
           </li>
         </ul>
@@ -145,24 +138,24 @@
       <div class="container">
         <div class="section-head">
           <h2 id="ministries-title" class="section-title">Parish life</h2>
-          <p class="section-deck">Faith grows in community. There is a place here for your gifts.</p>
+          <p class="section-deck">Faith grows in community. Explore <a href="ministries.html">ministries and volunteer opportunities</a>.</p>
         </div>
         <div class="ministry-grid">
           <article class="ministry-card">
             <h3>Religious education</h3>
-            <p>Formation for children, youth, and adults—including RCIA and sacramental prep.</p>
+            <p>Formation for children, youth, and adults—including RCIA and sacramental prep. <a href="faith-formation.html">Programs →</a></p>
           </article>
           <article class="ministry-card">
             <h3>St. Vincent de Paul</h3>
-            <p>Neighbor-to-neighbor assistance with food, rent, and utility support.</p>
+            <p>Neighbor-to-neighbor assistance with food, rent, and utilities. <a href="ministries.html#outreach">Learn more →</a></p>
           </article>
           <article class="ministry-card">
             <h3>Music &amp; liturgy</h3>
-            <p>Choir, cantors, and servers help our worship reflect the beauty of holiness.</p>
+            <p>Choir, cantors, and servers. <a href="ministries.html#liturgy">Serve at Mass →</a></p>
           </article>
           <article class="ministry-card">
             <h3>Knights of Columbus</h3>
-            <p>Fraternal charity, pro-life witness, and service to priests and seminarians.</p>
+            <p>Charity, unity, fraternity. <a href="ministries.html#fraternal">Council info →</a></p>
           </article>
         </div>
       </div>
@@ -176,38 +169,22 @@
           <ul class="visit-details">
             <li><strong>Address</strong> 742 Evergreen Terrace, Our City, ST 00000</li>
             <li><strong>Office hours</strong> Monday–Friday, 9:00 a.m.–4:30 p.m.</li>
+            <li><strong>Map</strong> <a href="https://www.openstreetmap.org/search?query=742%20Evergreen%20Terrace" rel="noopener noreferrer" target="_blank">Open in OpenStreetMap <span class="visually-hidden">(opens new tab)</span></a></li>
           </ul>
+          <p><a class="btn btn-primary" href="contact.html">Get directions &amp; contact</a></p>
         </div>
-        <div class="visit-map" role="img" aria-label="Decorative map placeholder">
-          <div class="map-placeholder">
-            <span class="map-cross" aria-hidden="true">✠</span>
-            <span>Map integration can be added here</span>
-          </div>
-        </div>
+        <figure class="media-figure visit-map">
+          <img src="images/stained-glass.svg" width="400" height="560" alt="Decorative stained glass arch illustration" loading="lazy">
+          <figcaption>“O taste and see that the Lord is good.” — Psalm 34:8</figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
       <div class="container narrow">
         <h2 id="contact-title" class="section-title">Contact us</h2>
-        <p class="section-intro">Questions about sacraments, registrations, or how to get involved? Reach out—we read every message.</p>
-        <form class="contact-form" action="#" method="post">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name">
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send message</button>
-        </form>
-        <p class="form-note">This demo form does not send mail. Connect your backend or a form service to go live.</p>
-        <div class="contact-direct">
+        <p class="section-intro">Questions about sacraments, registrations, or how to get involved? Visit our full <a href="contact.html">contact page</a> or call the office.</p>
+        <div class="contact-direct" style="margin-top: var(--space-md); border: none; padding: 0;">
           <p><strong>Parish office</strong> <a href="tel:+15555550100">(555) 555-0100</a></p>
           <p><strong>Pastor</strong> <a href="mailto:pastor@stmaryangels.example">pastor@stmaryangels.example</a></p>
         </div>
@@ -215,25 +192,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-mark" aria-hidden="true">✠</span>
-        <div>
-          <strong>St. Mary of the Angels</strong>
-          <p>Roman Catholic Parish · Diocese of Example</p>
-        </div>
-      </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#welcome">Welcome</a>
-        <a href="#mass">Mass</a>
-        <a href="#sacraments">Sacraments</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <p class="footer-copy">© <span id="year"></span> St. Mary of the Angels. Built with reverence and care.</p>
-    </div>
-  </footer>
+  <div id="site-footer-root"></div>
 
+  <script src="js/chrome.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="t2">
+  <title id="t2">Abstract figures gathered in fellowship</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ebe3d6"/>
+      <stop offset="100%" style="stop-color:#f5f0e8"/>
+    </linearGradient>
+    <linearGradient id="robe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#243652"/>
+      <stop offset="100%" style="stop-color:#152238"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="8" fill="url(#bg)"/>
+  <ellipse cx="320" cy="360" rx="260" ry="22" fill="#152238" opacity="0.06"/>
+  <!-- Simple human silhouettes -->
+  <g fill="url(#robe)" opacity="0.9">
+    <ellipse cx="200" cy="175" rx="22" ry="24"/>
+    <path d="M175 210 Q200 195 225 210 L235 320 L165 320 Z"/>
+    <ellipse cx="320" cy="165" rx="26" ry="28"/>
+    <path d="M288 205 Q320 185 352 205 L368 330 L272 330 Z"/>
+    <ellipse cx="440" cy="178" rx="22" ry="24"/>
+    <path d="M415 212 Q440 198 465 212 L475 318 L405 318 Z"/>
+  </g>
+  <g fill="#b8922e" opacity="0.85">
+    <path d="M310 245 L330 265 L315 285 Z"/>
+    <circle cx="320" cy="238" r="6"/>
+  </g>
+  <path d="M120 120 Q320 60 520 120" fill="none" stroke="#b8922e" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+</svg>
