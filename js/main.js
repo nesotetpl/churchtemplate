@@ -35,4 +35,18 @@
       });
     });
   }
+
+  var form = document.getElementById("contact-form");
+  var success = document.getElementById("form-success");
+  if (form && success) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      success.classList.add("is-visible");
+      if (typeof success.focus === "function") {
+        success.setAttribute("tabindex", "-1");
+        success.focus();
+      }
+      form.reset();
+    });
+  }
 })();

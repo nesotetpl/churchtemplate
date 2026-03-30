@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img" aria-labelledby="t4">
+  <title id="t4">Chalice and host symbolic illustration</title>
+  <defs>
+    <linearGradient id="chalice" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8d89a"/>
+      <stop offset="40%" style="stop-color:#c9a227"/>
+      <stop offset="100%" style="stop-color:#8a7020"/>
+    </linearGradient>
+    <radialGradient id="host" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fffef5"/>
+      <stop offset="70%" style="stop-color:#f0ead8"/>
+      <stop offset="100%" style="stop-color:#d4c9a8"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="#152238" rx="8"/>
+  <ellipse cx="240" cy="300" rx="160" ry="18" fill="#0a101a" opacity="0.5"/>
+  <!-- Chalice -->
+  <path d="M200 280 L200 200 Q200 120 240 100 Q280 120 280 200 L280 280 Z" fill="url(#chalice)" stroke="#6b5a1e" stroke-width="1.5"/>
+  <path d="M185 280 L295 280 L288 295 L192 295 Z" fill="#6b5a1e"/>
+  <rect x="228" y="295" width="24" height="40" fill="url(#chalice)"/>
+  <ellipse cx="240" cy="338" rx="42" ry="10" fill="#8a7020"/>
+  <!-- Host -->
+  <circle cx="240" cy="155" r="38" fill="url(#host)" stroke="#b8922e" stroke-width="2"/>
+  <g fill="none" stroke="#722f37" stroke-width="1.8" opacity="0.65">
+    <line x1="240" y1="125" x2="240" y2="185"/>
+    <line x1="210" y1="155" x2="270" y2="155"/>
+  </g>
+  <!-- Rays -->
+  <g stroke="#d4af37" stroke-width="1" opacity="0.25">
+    <line x1="240" y1="155" x2="240" y2="55"/>
+    <line x1="240" y1="155" x2="120" y2="100"/>
+    <line x1="240" y1="155" x2="360" y2="100"/>
+  </g>
+</svg>
