@@ -4,6 +4,7 @@
   var header = document.querySelector(".site-header");
   var nav = document.querySelector(".site-nav");
   var toggle = document.querySelector(".nav-toggle");
+  var backdrop = document.querySelector(".nav-backdrop");
   var yearEl = document.getElementById("year");
 
   if (yearEl) {
@@ -18,23 +19,46 @@
   setScrolled();
   window.addEventListener("scroll", setScrolled, { passive: true });
 
+  function closeMenu() {
+    if (!nav || !toggle) return;
+    nav.classList.remove("is-open");
+    document.body.classList.remove("nav-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
+  }
+
+  function openMenu() {
+    if (!nav || !toggle) return;
+    nav.classList.add("is-open");
+    document.body.classList.add("nav-open");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Close menu");
+  }
+
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
-      document.body.classList.toggle("nav-open", open);
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      if (nav.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open menu");
-      });
+      link.addEventListener("click", closeMenu);
     });
   }
+
+  if (backdrop) {
+    backdrop.addEventListener("click", closeMenu);
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
+      closeMenu();
+      if (toggle) toggle.focus();
+    }
+  });
 
   var form = document.getElementById("contact-form");
   var success = document.getElementById("form-success");

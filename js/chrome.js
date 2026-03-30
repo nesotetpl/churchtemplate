@@ -3,15 +3,9 @@
 
   var NAV = [
     { href: "index.html", label: "Home" },
-    { href: "about.html", label: "About" },
     { href: "mass-times.html", label: "Mass" },
-    { href: "sacraments.html", label: "Sacraments" },
-    { href: "faith-formation.html", label: "Faith formation" },
-    { href: "ministries.html", label: "Ministries" },
-    { href: "events.html", label: "Events" },
     { href: "bulletin.html", label: "Bulletin" },
     { href: "donate.html", label: "Give" },
-    { href: "clergy.html", label: "Clergy & staff" },
     { href: "contact.html", label: "Contact", cta: true }
   ];
 
@@ -63,7 +57,9 @@
       "<nav class=\"site-nav\" id=\"site-nav\" aria-label=\"Primary\">" +
       "<ul class=\"nav-list\">" +
       navLi +
-      "</ul></nav></div></header>"
+      "</ul></nav>" +
+      "<div class=\"nav-backdrop\" aria-hidden=\"true\"></div>" +
+      "</div></header>"
     );
   }
 
@@ -78,10 +74,6 @@
       "<nav class=\"footer-nav\" aria-label=\"Footer\">" +
       "<a href=\"index.html\">Home</a>" +
       "<a href=\"mass-times.html\">Mass</a>" +
-      "<a href=\"bulletin.html\">Bulletin</a>" +
-      "<a href=\"donate.html\">Give</a>" +
-      "<a href=\"https://www.usccb.org/prayer-and-worship/the-mass/daily-readings\" rel=\"noopener noreferrer\" target=\"_blank\">Daily readings</a>" +
-      "<a href=\"https://www.vatican.va/content/vatican/en.html\" rel=\"noopener noreferrer\" target=\"_blank\">The Vatican</a>" +
       "<a href=\"contact.html\">Contact</a>" +
       "</nav>" +
       "<p class=\"footer-copy\">© <span id=\"year\"></span> St. Mary of the Angels. Built with reverence and care.</p>" +
